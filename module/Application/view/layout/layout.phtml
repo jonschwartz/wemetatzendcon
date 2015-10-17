@@ -14,7 +14,8 @@
         <?php echo $this->headLink()
                         ->prependStylesheet($this->basePath() . '/css/style.css')
                         ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+                        ->prependStylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') ?>
 
         <!-- Scripts -->
         <?php echo $this->headScript()
@@ -29,10 +30,12 @@
 
     </head>
     <body>
-        <div class="jumbotron">We Met At Zendcon</div>
         <div class="container">
+            <h1>We Met At Zendcon</h1>
             <?php echo $this->content; ?>
+            <div id="footer" class="text-center">This was hastily thrown together by <a href="http://www.twitter.com/jonschwartz" target = "_blank">Jon Schwartz</a> on the way to Zendcon</div>
         </div>
+
         <?php echo $this->inlineScript()->prependFile($this->basePath().'/js/wmaz.js', 'text/babel'); ?>
     </body>
 </html>
