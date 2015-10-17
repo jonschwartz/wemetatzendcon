@@ -9,7 +9,11 @@ class ApiController extends AbstractRestfulController
 {
     public function addtopathAction()
     {
-        //return new ViewModel();
+        $twitterhandle = $this->getEvent()->getRouteMatch()->getParam('twitterhandle');
+
+        $vars = array('th' =>$twitterhandle);
+
+        return new ViewModel($vars);
     }
 
     public function getpathhistoryAction()
